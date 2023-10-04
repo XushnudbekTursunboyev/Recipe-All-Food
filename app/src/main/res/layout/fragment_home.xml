@@ -7,12 +7,6 @@
     android:background="#F0F1F5"
     tools:context=".ui.home.HomFragment">
 
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,17 +16,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_view_back">
+
                 <TextView
-                    android:layout_marginHorizontal="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
                     android:padding="10dp"
-                    android:textStyle="bold"
                     android:text="All Recipes"
-                    android:textSize="21sp"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/gray"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
             </androidx.appcompat.widget.LinearLayoutCompat>
-
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -41,17 +35,17 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="10dp">
-
+                app:cardElevation="3dp">
 
                 <SearchView
                     android:id="@+id/search_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/search_bg"
+                    android:clickable="false"
                     android:iconifiedByDefault="false"
                     android:queryBackground="@color/transparent"
-                    android:queryHint="Search for recipes"
+                    android:queryHint="Coming soon!"
                     android:theme="@style/ThemeOverlay.Search" />
 
             </androidx.cardview.widget.CardView>
@@ -59,10 +53,10 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_main_category"
                 android:layout_width="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginVertical="10dp"
                 android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="1"
                 tools:listitem="@layout/item_main_category" />
 
@@ -70,25 +64,21 @@
                 android:id="@+id/tvCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:paddingStart="10dp"
-                android:text="Category name"
+                android:text="Beef"
+                android:textColor="@color/black"
                 android:textSize="15sp"
-                android:textColor="@color/black" />
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:id="@+id/rv_sub_category"
                 android:layout_width="match_parent"
+                app:spanCount="2"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                tools:itemCount="1"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="2"
                 tools:listitem="@layout/item_sub_category" />
 
-
         </LinearLayout>
-    </ScrollView>
-
-
 </RelativeLayout>

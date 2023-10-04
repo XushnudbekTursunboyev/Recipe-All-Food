@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:backgroundTint="@color/yellow"
-    android:elevation="4dp"
+    app:cardElevation="2dp"
     android:layout_margin="10dp"
     app:cardCornerRadius="16dp">
 
@@ -14,8 +14,9 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_dish"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="wrap_content"
+            android:scaleType="fitEnd"
+            android:layout_height="75dp"
             android:src="@drawable/cat_img"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

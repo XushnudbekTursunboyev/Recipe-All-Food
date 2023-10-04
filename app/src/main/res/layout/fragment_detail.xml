@@ -7,14 +7,12 @@
     android:background="#F0F1F5"
     tools:context=".ui.detail.DetailFragment">
 
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/appBar"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:background="@color/transparent">
-
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -23,8 +21,6 @@
             app:expandedTitleMarginStart="16dp"
             app:expandedTitleMarginEnd="72dp"
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
-
-
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:layout_width="match_parent"
@@ -51,6 +47,7 @@
                 android:paddingTop="8dp"
                 android:paddingEnd="4dp"
                 android:paddingBottom="8dp"
+                android:tint="@color/white"
                 android:layout_margin="10dp"
                 android:layout_gravity="start"
                 android:background="@drawable/btn_bg2"
@@ -63,9 +60,11 @@
                 android:padding="8dp"
                 android:layout_margin="10dp"
                 android:layout_gravity="end"
+                android:tint="@color/white"
                 android:background="@drawable/btn_bg2"
                 android:id="@+id/imgToolbarBtnFav"
-                android:src="@drawable/ic_fav_unfill"/>
+                android:src="@drawable/ic_fav_unfill"
+                tools:ignore="UseAppTint" />
 
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -103,9 +102,10 @@
                         android:textAlignment="center"
                         android:padding="10dp"
                         android:text="Category name"
+                        android:textStyle="bold"
                         android:id="@+id/tvCategory"
                         android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -121,8 +121,10 @@
 
                             <ImageView
                                 android:layout_width="wrap_content"
+                                android:tint="@color/yellow"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_time"/>
+                                android:src="@drawable/ic_time"
+                                tools:ignore="UseAppTint" />
 
 
                             <TextView
@@ -150,8 +152,10 @@
 
                             <ImageView
                                 android:layout_width="wrap_content"
+                                android:tint="@color/yellow"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_time"/>
+                                android:src="@drawable/ic_cals"
+                                tools:ignore="UseAppTint" />
 
 
                             <TextView
@@ -176,9 +180,10 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_time"/>
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/groups"
+                                tools:ignore="UseAppTint" />
 
 
                             <TextView
@@ -206,9 +211,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
+                android:textStyle="bold"
                 android:text="Ingredients"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -225,7 +231,7 @@
                         android:id="@+id/tvIngredients"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="10sp"
+                        android:textSize="12sp"
                         android:textColor="@color/hintTextColor"
                         android:textStyle="bold"
                         android:paddingTop="10dp"
@@ -240,14 +246,15 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:text="Instructions"
+                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/pink"
+                app:cardBackgroundColor="#FDDFB1"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp">
                 <LinearLayout
@@ -259,7 +266,7 @@
                         android:id="@+id/tvInstructions"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="10sp"
+                        android:textSize="11sp"
                         android:textColor="@color/hintTextColor"
                         android:textStyle="bold"
                         android:paddingTop="10dp"
@@ -278,9 +285,9 @@
                 android:layout_margin="10dp"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                app:backgroundTint="@color/youtube"
+                app:backgroundTint="@color/yellow"
                 android:background="@drawable/btn_bg3"
-                android:text="YOutube"/>
+                android:text="Learn more"/>
 
             <Space
                 android:layout_width="match_parent"

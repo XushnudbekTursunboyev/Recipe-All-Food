@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.recipe"
+        applicationId "uz.xushnudbek.recipe"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -74,5 +74,11 @@ dependencies {
 
     //rounded image view
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    /***
+     * lottie
+     */
+    implementation("com.airbnb.android:lottie:6.1.0")
+
 
 }
